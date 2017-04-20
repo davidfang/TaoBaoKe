@@ -5,7 +5,7 @@ export default class ModalBox extends React.Component{
         return (
             <div className="modalBox">
                 <div>这是一个模态框</div>
-                <span>Close Me!</span>
+                <button onClick={() => this.props.onClick()}>Close Me!</button>
             </div>
         )
     }

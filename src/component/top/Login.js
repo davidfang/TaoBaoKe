@@ -7,16 +7,27 @@ export default class Login extends React.Component{
            ModalIsShow : false,
         }
     }
-    handleLogin(e){
+    handleLogin(){  //弹出模态框
+        this.setState({
+            ModalIsShow:true,
+        })
+    }
+    handCloseModal(){ //关闭模态框
         this.setState({
             ModalIsShow:!this.state.ModalIsShow,
-        })
+        });
+    }
+    renderModal(){
+        return this.state.ModalIsShow ? <ModalBox ModalStatus={this.state.ModalIsShow} onClick={()=>this.handCloseModal()}/> : null;
+        //传给ModalBox两个参数 ModalStatus 和onClick(ModalBox可以调用的函数)
     }
     render() {
         return (
-            <div className="login" onClick={this.handleLogin.bind(this)}>
-                会员登录
-                {this.state.ModalIsShow ? <ModalBox/> : null}
+            <div className="login">
+                <span onClick={this.handleLogin.bind(this)}>会员登录</span>
+                <div>
+                    {this.renderModal()}
+                </div>
             </div>
         )
     }
