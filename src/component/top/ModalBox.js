@@ -4,8 +4,9 @@ export default class ModalBox extends React.Component{
     render() {
         return (
             <div className="modalBox">
-                <div>这是一个模态框</div>
-                <button onClick={() => this.props.onClick()}>Close Me!</button>
+                <input placeholder="账户:"/>
+                <input placeholder="密码:" />
+                <button onClick={() => this.props.onClick()}>立即登录</button>
             </div>
         )
     }
