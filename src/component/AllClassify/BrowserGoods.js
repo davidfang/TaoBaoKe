@@ -8,7 +8,7 @@ import {bindActionCreators} from 'redux';
 import {get,post} from "../../http/http";
 
 
-class CardsGrid extends React.Component{
+class BrowserGoods extends React.Component{
     constructor(props){
         super(props);
         this.style={
@@ -18,14 +18,7 @@ class CardsGrid extends React.Component{
         }
     }
 
-    // componentWillMount(){
-    //     const {dispatch} = this.props;
-    //     let actions = bindActionCreators(testActions, dispatch);
-    //     let newAct = eval('actions.'+this.props.card);
-    //     get("/test/getTestContent",(res)=>{
-    //         newAct(res.data.content);
-    //     })
-    // }
+
 
 
     handleClick(e){
