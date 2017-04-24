@@ -1,8 +1,8 @@
-import * as testActions from '../actions/testAction'
+import * as testActions from '../../actions/testAction'
 import React from 'react'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux';
-import {get,post} from "../http/http"
+import {get,post} from "../../http/http"
 
 
 class MyButton extends React.Component {
