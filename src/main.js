@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MyButton from './component/MyButton'
-import Hello from './component/Hello'
+
 import {Provider} from 'react-redux'
 import createStore from './store/configureStore'
-import ClassifyBar from './component/ClassifyBar'
+import ClassifyBar from './component/AllClassify/ClassifyBar'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Top from "./component/top/Top";
 import Search from "./component/search/Search"
+import Root from './component/Rooter'
 
 injectTapEventPlugin();
 const store = createStore();
@@ -21,7 +21,7 @@ class Main extends React.Component {
                 <div>
                     <Top/>
                     <Search/>
-                    <ClassifyBar/>
+                    <Root/>
                 </div>
 
             </Provider>

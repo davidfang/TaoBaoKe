@@ -6,9 +6,16 @@ export function click(data){
     }
 }
 
-export function click2(data){
+export function momImgLoading(data){
     return{
-        type:"CLICK2",
+        type:"MOMIMGLOADING",
         payload: data
     }
 }
+export function foodImgLoading(data){
+    return{
+        type:"FOODIMGLOADING",
+        payload: data
+    }
+}
+

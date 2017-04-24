@@ -35,8 +35,8 @@ export default class Root extends React.Component {
                     <Router history={history}>
                         <div>
 
-                        <ClassifyBar path="/">
-                            <Redirect from="/" to="/All"/>
+                        <ClassifyBar >
+                            {location.pathname == '/' ? <Redirect from="/" to="/All"/> : null}
                             <Route path='/All' component={ AllClassify }/>
                             <Route path='/Beautiful' component={ Beautiful }/>
                             <Route path='/Carthings' component={ Carthings }/>

@@ -56,6 +56,8 @@ export default class ClassifyBar extends React.Component {
 
     }
     componentWillMount(){
+        console.log(window.location.pathname);
+
         switch (window.location.pathname){
             case '/All':
                 this.iniSelect=0;
@@ -78,6 +80,32 @@ export default class ClassifyBar extends React.Component {
 
         }
     }
+    componentWillReceiveProps(){
+        console.log(window.location.pathname+1);
+
+        switch (window.location.pathname){
+            case '/All':
+                this.iniSelect=0;
+                break;
+            case '/Mombaby':
+                this.iniSelect=1;
+                break;
+            case '/Carthings':
+                this.iniSelect=2;
+                break;
+            case '/Beautiful':
+                this.iniSelect=3;
+                break;
+            case '/Clothes':
+                this.iniSelect=4;
+                break;
+            case '/Foods':
+                this.iniSelect=5;
+                break;
+
+        }
+    }
+
 
     render() {
         return (

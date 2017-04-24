@@ -1,5 +1,7 @@
 const initState = {
-    helloText: "hello world"
+    helloText: "hello world",
+    monBabyImg:[],
+    foodImg:[]
 
 };
 
@@ -11,7 +13,13 @@ export default function testReducer(state = initState, action = {}) {
             clone.helloText = payload;
             console.log(payload);
             return clone;
-        
+        case "MOMIMGLOADING":
+            clone.monBabyImg = payload;
+            return clone;
+        case "FOODIMGLOADING":
+            clone.foodImg = payload;
+            return clone;
+
     }
     return clone;
 }
