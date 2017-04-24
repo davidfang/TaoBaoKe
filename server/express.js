@@ -10,7 +10,7 @@ var webpackHotMiddleware = require('webpack-hot-middleware');
 var webpackDevConfig = require('../webpack.config');
 
 var CSS_DIR = path.join(__dirname,"..","css");
-var IMG_DIR = path.join(__dirname,"..","imgs");
+var IMG_DIR = path.join(__dirname,"..","images");
 module.exports = function () {
     var app = new express();
     var compiler = webpack(webpackDevConfig);
@@ -18,13 +18,15 @@ module.exports = function () {
     app.use(bodyParser.json())
     app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: webpackDevConfig.output.publicPath}));
     app.use(webpackHotMiddleware(compiler));
+    app.use(express.static('./statics'));
 
-
+    app.use('/images', express.static(IMG_DIR));
     require('./api')(app);
 
     app.get("/*", function (req, res) {
         res.sendFile(__dirname + '/index.html');
     });
+
 
 
 
