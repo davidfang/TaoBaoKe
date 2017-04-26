@@ -1,8 +1,11 @@
 /**
  * Created by weng on 2017/4/18.
  */
+
+
 import React from 'react';
-import {BrowserRouter as Router, Route, Redirect, Link, IndexRoute} from 'react-router-dom';
+
+import { BrowserRouter as Router, Route, Redirect,Link,IndexRoute  } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory'
 import ClassifyBar from './AllClassify/ClassifyBar';
 import AllClassify from './AllClassify/AllClassify';
@@ -16,26 +19,45 @@ import Detail from "./ProductsDetail/Detail"
 const history = createHistory();
 
 export default class Root extends React.Component {
-    constructor(props) {
+    constructor(props){
         super(props);
+
+
+
     }
-    render() {
-        return (
-            <Router history={history}>
-                <div>
-                    <ClassifyBar >
-                        {location.pathname == '/' ? <Redirect from="/" to="/All"/> : null}
-                        <Route path='/All' component={ AllClassify }/>
-                        <Route path='/Beautiful' component={ Beautiful }/>
-                        <Route path='/Carthings' component={ Carthings }/>
-                        <Route path='/Clothes' component={ Clothes }/>
-                        <Route path='/Foods' component={ Foods }/>
-                        <Route path='/Mombaby' component={ Mombaby }/>
-                        <Route path='/Detail' component={ Detail }/>
-                    </ClassifyBar>
-                </div>
-            </Router>
+
+
+    render(){
+
+        return(
+
+
+
+                    <Router history={history}>
+                        <div>
+
+                        <ClassifyBar >
+                            {location.pathname == '/' ? <Redirect from="/" to="/All"/> : null}
+                            <Route path='/All' component={ AllClassify }/>
+                            <Route path='/Beautiful' component={ Beautiful }/>
+                            <Route path='/Carthings' component={ Carthings }/>
+                            <Route path='/Clothes' component={ Clothes }/>
+                            <Route path='/Foods' component={ Foods }/>
+                            <Route path='/Mombaby' component={ Mombaby }/>                        <Route path='/Detail' component={ Detail }/>
+                            <Route path='/Detail' component={ Detail }/>
+                        </ClassifyBar>
+                        </div>
+                    </Router>
+
+
+
         )
+
+
+
     }
+
+
+
 
 }

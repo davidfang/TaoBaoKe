@@ -13,6 +13,7 @@ finalCreateStore = finalApplyMiddleware(createStore);
 
 export default function configureStore(initialState) {
     const store = finalCreateStore(reducer, initialState);
+
     if (module.hot) {
         // Enable Webpack hot module replacement for reducers
         module.hot.accept('../reducers', () => {
@@ -20,5 +21,6 @@ export default function configureStore(initialState) {
             store.replaceReducer(nextReducer);
         });
     }
+
     return store;
 }
