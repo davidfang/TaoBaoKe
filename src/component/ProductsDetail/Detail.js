@@ -19,7 +19,7 @@ export default class Detail extends React.Component{
         // this.setState(this.props.goodsDetail)
         this.setState({  //测试数据
             pic:{picSrc:"/images/test1.png",picName:"某某商品"},
-            textIntroduction:"Redux 是 JavaScript 状态容器，提供可预测化的状态管理",
+            textIntroduction:"如果你不知道是否需要 Redux，那就是不需要它",
             originalPrice:58.00,
             coupon:30,
             sales:1108,
@@ -33,8 +33,9 @@ export default class Detail extends React.Component{
                     <img src={this.state.pic.picSrc}/>
                 </div>
                 <div className="text">{this.state.textIntroduction}</div>
-                <div className="preferentialPrice">券后价格:{this.state.originalPrice-this.state.coupon}</div>
-                <div className="intro"><span>在售价:{this.state.originalPrice}</span><span>券:{this.state.coupon}</span><span>销量:{this.state.sales}</span></div>
+                <div className="preferentialPrice">券后价格:<span className="number">{this.state.originalPrice-this.state.coupon}</span>元</div>
+                <hr/>
+                <div className="intro"><span className="first">在售价: {this.state.originalPrice}</span><span>券:{this.state.coupon}元</span><span>销量{this.state.sales}</span></div>
             </div>
         )
     }
