@@ -29,7 +29,7 @@ class BrowserGoods extends React.Component{
 
             <div className="imgGrid">
                 {/*{newImg.map((item,indx)=>{<img src={item} key={indx} onClick={()=>this.handleClick()} width='260px'/>})}*/}
-                <div width='240px' style={{width:'240px',display:'inline-block',backgroundColor:"white"}}>
+                <div width='240px' style={{width:'240px',display:'inline-block',backgroundColor:"white",cursor: "pointer"}}>
                     <div style={{width:'220px',display:"inline-block",margin:'0 auto',padding:'10px'}}>
                         <img src="/images/cardbg1.png" width='220px' style={{margin:'0 auto'}}/>
                         <div style={{width:'100%',display:"inline-block",margin:'0 auto'}}>
