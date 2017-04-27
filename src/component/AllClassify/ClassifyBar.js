@@ -111,8 +111,8 @@ export default class ClassifyBar extends React.Component {
         return (
             <MuiThemeProvider>
                 <div>
-                    <Tabs initialSelectedIndex={this.iniSelect}>
-                        {this.list.map( (e, idx) => <Tab value={idx} style={{fontSize: "12px"}}  key={idx} label={e.label} containerElement={<Link to={e.link}></Link>}></Tab>)}
+                    <Tabs initialSelectedIndex={this.iniSelect} tabItemContainerStyle={{backgroundColor:'white'}}>
+                        {this.list.map( (e, idx) => <Tab value={idx} style={{fontSize: "12px",color:'black'}}  key={idx} label={e.label} containerElement={<Link to={e.link}></Link>}></Tab>)}
                     </Tabs>
                     {this.props.children}
                 </div>
