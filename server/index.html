@@ -61,6 +61,7 @@
         .search{
             background-color: #f54d23;
             height: 50px;
+            position: relative;
         }
         .heze{
             outline:none;
@@ -73,25 +74,31 @@
             color: white;
         }
         .searchInput{
-            background:none;
-            outline:none;
+            position: absolute;
+            outline: none;
+            background-color: #e4371b;
             border:0px;
             display: block;
-            width: 50%;
-            height: 48px;
-            /*background-color: #c7d8c6;*/
+            width: 48%;
+            top: 8px;
+            left: 30%;
+            height: 30px;
             float: left;
             color: white;
-
         }
+        ::-moz-placeholder { color: white; }
+        ::-webkit-input-placeholder { color:white; }
+        :-ms-input-placeholder { color:white; }
+
         .searchButton{
             outline:none;
             border:0px;
             width: 20%;
             height: 50px;
-            /*background-color: #37526d;*/
-            float: left;
+            float: right;
             color: white;
+            background-color: #f54d23;
+            cursor: pointer;
         }
 
         /*商品详情*/
