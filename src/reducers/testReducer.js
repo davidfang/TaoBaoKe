@@ -1,7 +1,12 @@
 const initState = {
     helloText: "hello world",
-    monBabyImg:[],
-    foodImg:[]
+    foodImgLoading:[],
+    momImgLoading:[],
+    Mombaby:[],
+    Beautiful:[],
+    Clothes:[],
+    Foods:[],
+    CarThings:[]
 
 };
 
@@ -14,11 +19,27 @@ export default function testReducer(state = initState, action = {}) {
             console.log(payload);
             return clone;
         case "MOMIMGLOADING":
-            clone.monBabyImg = payload;
+            clone.momImgLoading = payload;
             return clone;
         case "FOODIMGLOADING":
-            clone.foodImg = payload;
+            clone.foodImgLoading = payload;
             return clone;
+        case "MOMBABY":
+            clone.Mombaby = payload;
+            return clone;
+        case "CARTHINGS":
+            clone.CarThings = payload;
+            return clone;
+        case "FOODS":
+            clone.Foods = payload;
+            return clone;
+        case "BEAUTIFUL":
+            clone.Beautiful = payload;
+            return clone;
+        case "CLOTHES":
+            clone.Clothes = payload;
+            return clone;
+
 
     }
     return clone;

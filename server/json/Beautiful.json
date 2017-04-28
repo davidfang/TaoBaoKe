@@ -1,0 +1,81 @@
+{
+  "msg":[
+    {"pic":"images/cardbg1.png",
+      "sales":1111,
+      "originalPrice":300,
+      "text":"bbbbbb",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1112,
+      "originalPrice":300,
+      "text":"bbbbbbbb",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"bbbbbbbb",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"bbbbbbb",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"hahahhaha",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"hahahhaha",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"hahahhaha",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"hahahhaha",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"hahahhaha",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"hahahhaha",
+      "discount":50
+
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"hahahhaha",
+      "discount":50
+
+    }
+  ]
+}

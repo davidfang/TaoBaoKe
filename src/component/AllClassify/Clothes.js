@@ -8,7 +8,7 @@ export default class Clothes extends React.Component {
 
     render() {
         return (
-            <BrowserGoods/>
+            <BrowserGoods card="Clothes"/>
         )
     }
 }

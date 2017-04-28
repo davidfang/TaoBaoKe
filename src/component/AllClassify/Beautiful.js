@@ -12,7 +12,7 @@ export default class Beautiful extends React.Component {
 
     render() {
         return (
-            <BrowserGoods/>
+            <BrowserGoods card="Beautiful"/>
         )
     }
 }

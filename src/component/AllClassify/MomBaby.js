@@ -19,7 +19,7 @@ export default class MomBaby extends React.Component {
 
     render() {
         return (
-            <BrowserGoods/>
+            <BrowserGoods card="Mombaby"/>
         )
     }
 }
