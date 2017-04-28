@@ -56,7 +56,7 @@ export default class ClassifyBar extends React.Component {
 
     }
     componentWillMount(){
-        console.log(window.location.pathname);
+
 
         switch (window.location.pathname){
             case '/All':
@@ -81,8 +81,6 @@ export default class ClassifyBar extends React.Component {
         }
     }
     componentWillReceiveProps(){
-        console.log(window.location.pathname+1);
-
         switch (window.location.pathname){
             case '/All':
                 this.iniSelect=0;

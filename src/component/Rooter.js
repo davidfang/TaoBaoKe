@@ -43,9 +43,10 @@ export default class Root extends React.Component {
                             <Route path='/Carthings' component={ Carthings }/>
                             <Route path='/Clothes' component={ Clothes }/>
                             <Route path='/Foods' component={ Foods }/>
-                            <Route path='/Mombaby' component={ Mombaby }/>                        
-                            <Route path='/Detail' component={ Detail }/>
+                            <Route path='/Mombaby' component={ Mombaby }/>
+
                         </ClassifyBar>
+                            <Route path='/Detail' component={ Detail }/>
                         </div>
                     </Router>
 
