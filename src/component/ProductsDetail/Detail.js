@@ -1,42 +1,47 @@
 import React from 'react';
+import * as testActions from '../../actions/testAction'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux';
+import {get,post} from "../../http/http";
 
-export default class Detail extends React.Component{
+class Detail extends React.Component{
     constructor(){
         super();
-        this.state={
-            pic:{ //商品图片信息
-                picSrc:'',
-                picName:'',
-            },
-            textIntroduction:"",//商品介绍
-            originalPrice:"",//原价
-            coupon:"",//优惠券
-            sales:'',//商品销量
-        }
+        this.state={}
     }
-    initialState(){//根据得到的数据初始化商品
-
-        // this.setState(this.props.goodsDetail)
-        this.setState({  //测试数据
-            pic:{picSrc:"/images/test1.png",picName:"某某商品"},
-            textIntroduction:"如果你不知道是否需要 Redux，那就是不需要它",
-            originalPrice:58.00,
-            coupon:30,
-            sales:1108,
+    componentWillMount(){
+        console.log("要渲染啦")
+        const {dispatch} = this.props;
+        let actions = bindActionCreators(testActions, dispatch);
+        let myPath =window.location.pathname.split("/")||["","","CarThings","1"];
+        let goodCard = myPath[2];
+        let goodId = myPath[3];
+        let newUrl = '/test/'+goodCard;
+        get(newUrl,(res)=>{
+            actions[goodCard](res.data.msg);
         })
+
     }
     render() {
+        console.log("正在渲染");
+        let myPath =window.location.pathname.split("/")||["","","CarThings","1"];
+        let goodCard = myPath[2];
+        let goodId = myPath[3];
+        let goodsArr = eval('this.props.testReducer.'+goodCard);
+        console.log(goodsArr);
+        let myItem = goodsArr[goodId ];
         return (
             <div className="detail">
-                {this.initialState()}
                 <div className="pic" >
-                    <img src={this.state.pic.picSrc}/>
+                    <img src={ myItem.pic || '/images/test1.png' }/>
                 </div>
-                <div className="text">{this.state.textIntroduction}</div>
-                <div className="preferentialPrice">券后价格:<span className="number">{this.state.originalPrice-this.state.coupon}</span>元</div>
+                <div className="text">{myItem.text}</div>
+                <div className="preferentialPrice">券后价格:<span className="number">{myItem.originalPrice-myItem.discount}</span>元</div>
                 <hr/>
-                <div className="intro"><span className="first">在售价: {this.state.originalPrice}</span><span>券:{this.state.coupon}元</span><span>销量{this.state.sales}</span></div>
+                <div className="intro"><span className="first">在售价: {myItem.originalPrice}</span><span>券:{this.state.coupon}元</span><span>销量{myItem.sales}</span></div>
             </div>
         )
     }
 }
+
+export  default connect((state)=>state)(Detail)
