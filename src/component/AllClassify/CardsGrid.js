@@ -19,7 +19,7 @@ class CardsGrid extends React.Component{
         //let newAct = 'actions.'+this.props.card;
         let newUrl = '/test/'+this.props.card;
         get(newUrl,(res)=>{
-            console.log(res);
+            // console.log(res);
             actions[this.props.card](res.data.msg);
         })
     }
