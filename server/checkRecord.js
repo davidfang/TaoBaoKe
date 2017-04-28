@@ -6,17 +6,17 @@ module.exports = function (app) {
         res.json(require("./json/Mombaby.json"))
     })
     app.use("/test/Beautiful",(req,res)=>{
-            res.json(require("./json/Beautiful.json"))
-        })
+        res.json(require("./json/Beautiful.json"))
+    })
     app.use("/test/Clothes",(req,res)=>{
-            res.json(require("./json/Clothes.json"))
-        })
+        res.json(require("./json/Clothes.json"))
+    })
     app.use("/test/Foods",(req,res)=>{
-            res.json(require("./json/Foods.json"))
-        })
+        res.json(require("./json/Foods.json"))
+    })
     app.use("/test/CarThings",(req,res)=>{
-            res.json(require("./json/CarThings.json"))
-        })
+        res.json(require("./json/CarThings.json"))
+    })
     app.use("/test/momImgLoading",(req,res)=>{
         res.json(require("./json/momImgLoading.json"))
     })

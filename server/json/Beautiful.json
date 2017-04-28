@@ -4,77 +4,97 @@
       "sales":1111,
       "originalPrice":300,
       "text":"bbbbbb",
-      "discount":50
+      "discount":50,
+      "id":1,
+      "classify":"Beautiful"
 
     },
     {"pic":"images/cardbg1.png",
       "sales":1112,
       "originalPrice":300,
       "text":"bbbbbbbb",
-      "discount":50
-
+      "discount":50,
+      "id":2,
+      "classify":"Beautiful"
     },
     {"pic":"images/cardbg1.png",
       "sales":1113,
       "originalPrice":300,
       "text":"bbbbbbbb",
-      "discount":50
+      "discount":50,
+      "id":3,
+      "classify":"Beautiful"
 
     },
     {"pic":"images/cardbg1.png",
       "sales":1113,
       "originalPrice":300,
       "text":"bbbbbbb",
-      "discount":50
+      "discount":50,
+      "id":4,
+      "classify":"Beautiful"
+    },
+    {"pic":"images/cardbg1.png",
+      "sales":1113,
+      "originalPrice":300,
+      "text":"hahahhaha",
+      "discount":50,
+      "id":5,
+      "classify":"Beautiful"
 
     },
     {"pic":"images/cardbg1.png",
       "sales":1113,
       "originalPrice":300,
       "text":"hahahhaha",
-      "discount":50
+      "discount":50,
+      "id":6,
+      "classify":"Beautiful"
 
     },
     {"pic":"images/cardbg1.png",
       "sales":1113,
       "originalPrice":300,
       "text":"hahahhaha",
-      "discount":50
+      "discount":50,
+      "id":7,
+      "classify":"Beautiful"
 
     },
     {"pic":"images/cardbg1.png",
       "sales":1113,
       "originalPrice":300,
       "text":"hahahhaha",
-      "discount":50
+      "discount":50,
+      "id":8,
+      "classify":"Beautiful"
 
     },
     {"pic":"images/cardbg1.png",
       "sales":1113,
       "originalPrice":300,
       "text":"hahahhaha",
-      "discount":50
+      "discount":50,
+      "id":9,
+      "classify":"Beautiful"
 
     },
     {"pic":"images/cardbg1.png",
       "sales":1113,
       "originalPrice":300,
       "text":"hahahhaha",
-      "discount":50
+      "discount":50,
+      "id":10,
+      "classify":"Beautiful"
 
     },
     {"pic":"images/cardbg1.png",
       "sales":1113,
       "originalPrice":300,
       "text":"hahahhaha",
-      "discount":50
-
-    },
-    {"pic":"images/cardbg1.png",
-      "sales":1113,
-      "originalPrice":300,
-      "text":"hahahhaha",
-      "discount":50
+      "discount":50,
+      "id":11,
+      "classify":"Beautiful"
 
     }
   ]
