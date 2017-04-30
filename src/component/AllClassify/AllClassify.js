@@ -94,7 +94,7 @@ export default class CardComponent extends React.Component {
                 <div width="100%">
 
                     <Card
-                        style={{overflow: "hidden", width: "80%",margin:"0 auto"}}
+                        style={{overflow: "hidden", width: "85%",margin:"0 auto"}}
                     >
 
                         <div style={{height: "500px",overflow: "hidden"}}>
@@ -124,7 +124,7 @@ export default class CardComponent extends React.Component {
 
                     <CardGrid card="momImgLoading"/>
                     <Card
-                        style={{overflow: "hidden", width: "80%",margin:"0 auto"}}
+                        style={{overflow: "hidden", width: "85%",margin:"0 auto",marginTop:'20px'}}
                     >
 
                         <div style={{height: "500px",overflow: "hidden"}}>
