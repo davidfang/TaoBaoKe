@@ -9,12 +9,12 @@ class Detail extends React.Component{
         super();
         this.state={}
     }
-    componentWillMount(){
-        console.log("要渲染啦")
+    componentDidMount(){
         const {dispatch} = this.props;
         let actions = bindActionCreators(testActions, dispatch);
         let myPath =window.location.pathname.split("/")||["","","CarThings","1"];
         let goodCard = myPath[2];
+        console.log(goodCard);
         let goodId = myPath[3];
         let newUrl = '/test/'+goodCard;
         get(newUrl,(res)=>{
@@ -25,9 +25,13 @@ class Detail extends React.Component{
     render() {
         console.log("正在渲染");
         let myPath =window.location.pathname.split("/")||["","","CarThings","1"];
+        console.log(myPath);
         let goodCard = myPath[2];
         let goodId = myPath[3];
+        console.log(this.props);
         let goodsArr = eval('this.props.testReducer.'+goodCard);
+        if(goodsArr && goodsArr.length < 1)
+            return null;
         console.log(goodsArr);
         let myItem = goodsArr[goodId ];
         return (
