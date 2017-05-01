@@ -42,9 +42,9 @@ class BrowserGoods extends React.Component{
                     let link = '/Detail/'+item.classify+'/'+item.id;
                     return (
                     <Link to={link} key={indx}>
-                        <div width='240px'  style={{width:'240px',display:'inline-block',backgroundColor:"white",cursor: "pointer",marginTop:20}}>
-                        <div style={{width:'220px',display:"inline-block",margin:'0 auto',padding:'10px'}}>
-                            <img src="/images/cardbg1.png" width='220px' style={{margin:'0 auto'}}/>
+                        <div  className="Browsergoods" >
+                        <div className="BrowserInnerDiv" >
+                            <img src={item.pic} style={{margin:'0 auto'}} className="BrowserImg"/>
                             <div style={{width:'100%',display:"inline-block",margin:'0 auto'}}>
                                 <p style={{fontSize:'10px'}}>{item.text}</p>
                                 <span style={{fontSize:'10px',color:'red'}}>券后：{item.originalPrice-item.discount}元</span>

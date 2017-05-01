@@ -7,6 +7,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import FlatButton from 'material-ui/FlatButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import CardGrid from './CardsGrid'
+import {Link }from 'react-router-dom';
 
 let currentIndex=0;
 let interval =null;
@@ -92,67 +93,88 @@ export default class CardComponent extends React.Component {
         return(
             <MuiThemeProvider>
                 <div width="100%">
+                    <div width="100%" className="PC">
 
-                    <Card
-                        style={{overflow: "hidden", width: "85%",margin:"0 auto"}}
-                    >
+                        <Card
+                            style={{overflow: "hidden", width: "80%",margin:"0 auto",marginTop:"20px"}}
+                        >
 
-                        <div style={{height: "500px",overflow: "hidden"}}>
-                            {this.state.picsArr.map( (e, idx) => {
-                                    const y = idx * 100;
-                                    const vis = e.posX == 0 ? {display: "none"} : null;
-                                    return (
-                                        <CardMedia
+                            <div style={{height: "500px",overflow: "hidden"}}>
+                                {this.state.picsArr.map( (e, idx) => {
+                                        const y = idx * 100;
+                                        const vis = e.posX == 0 ? {display: "none"} : null;
+                                        return (
+                                            <CardMedia
 
-                                            style={{
-                                                transition: `all ${this.state.delay}s`,
-                                                position: "relative",
-                                                transform: `translateX(${e.posX}%) translateY(-${y}%)`,
-                                                width:"100%",
-                                            }}
-                                            key={idx}
-                                        >
-                                            <img src={e.src} height="500px" />
+                                                style={{
+                                                    transition: `all ${this.state.delay}s`,
+                                                    position: "relative",
+                                                    transform: `translateX(${e.posX}%) translateY(-${y}%)`,
+                                                    width:"100%",
+                                                }}
+                                                key={idx}
+                                            >
+                                                <img src={e.src} height="500px" />
 
-                                        </CardMedia>
-                                    )
-                                }
-                            )}
-                        </div>
+                                            </CardMedia>
+                                        )
+                                    }
+                                )}
+                            </div>
 
-                    </Card>
+                        </Card>
 
-                    <CardGrid card="momImgLoading"/>
-                    <Card
-                        style={{overflow: "hidden", width: "85%",margin:"0 auto",marginTop:'20px'}}
-                    >
+                        <CardGrid card="momImgLoading"/>
+                        <Card
+                            style={{overflow: "hidden", width: "80%",margin:"0 auto",marginTop:'20px'}}
+                        >
 
-                        <div style={{height: "500px",overflow: "hidden"}}>
-                            {this.state.picsArr.map( (e, idx) => {
-                                    const y = idx * 100;
-                                    const vis = e.posX == 0 ? {display: "none"} : null;
-                                    return (
-                                        <CardMedia
+                            <div style={{height: "500px",overflow: "hidden"}}>
+                                {this.state.picsArr.map( (e, idx) => {
+                                        const y = idx * 100;
+                                        const vis = e.posX == 0 ? {display: "none"} : null;
+                                        return (
+                                            <CardMedia
 
-                                            style={{
-                                                transition: `all ${this.state.delay}s`,
-                                                position: "relative",
-                                                transform: `translateX(${e.posX}%) translateY(-${y}%)`,
-                                                width:"100%",
-                                            }}
-                                            key={idx}
-                                        >
-                                            <img src={e.src} height="500px" />
+                                                style={{
+                                                    transition: `all ${this.state.delay}s`,
+                                                    position: "relative",
+                                                    transform: `translateX(${e.posX}%) translateY(-${y}%)`,
+                                                    width:"100%",
+                                                }}
+                                                key={idx}
+                                            >
+                                                <img src={e.src} height="500px" />
 
-                                        </CardMedia>
-                                    )
-                                }
-                            )}
-                        </div>
+                                            </CardMedia>
+                                        )
+                                    }
+                                )}
+                            </div>
 
-                    </Card>
-                    <CardGrid card='foodImgLoading'/>
+                        </Card>
+                        <CardGrid card='foodImgLoading'/>
 
+                    </div>
+                    <div width="100%" className="Phone">
+                        <Link to='/Mombaby'>
+                            <img src="/images/cardbg1.png" width="100%"/>
+                        </Link>
+                        <Link to='/Carthings'>
+                            <img src="/images/cardbg1.png" width="100%"/>
+                        </Link>
+                        <Link to='/Beautiful'>
+                            <img src="/images/cardbg1.png" width="100%"/>
+                        </Link>
+                        <Link to='/Clothes'>
+                            <img src="/images/cardbg1.png" width="100%"/>
+                        </Link>
+                        <Link to='/Foods'>
+                            <img src="/images/cardbg1.png" width="100%"/>
+                        </Link>
+
+
+                    </div>
                 </div>
 
             </MuiThemeProvider>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>taobaoke</title>
     <style>
 
@@ -174,11 +175,12 @@
             -moz-column-width: 230px;
 
             overflow: hidden;
-            width:85%;
+            width:80%;
             margin:0 auto;
             margin-top: 20px;
             clear:both;
             background-color: ghostwhite;
+
         }
         .imgInner{
             -webkit-column-count: 2;
@@ -190,8 +192,95 @@
             -moz-column-count: 2;
             text-align: center;
         }
+        .Browsergoods{
+            width:240px;
+            display:inline-block;
+            backgroundColor:"white";
+            cursor: pointer;
+            marginTop:20;
+
+        }
+        .BrowserInnerDiv{
+            width:220px;
+            display:inline-block;
+            margin:0 auto;
+            padding:10px;
+        }
+        .BrowserImg{
+            width: 220px;
+        }
+        .PC{
+            display: block;
+        }
+        .Phone{
+            display: none;
+        }
         body{
             background-color: ghostwhite;
+        }
+        @media (min-width: 700px)and (max-width:920px ){
+            .imgGrid{
+                -webkit-column-count: 3;
+                -webkit-column-width: 150px;
+                width: 83%;
+                margin-left: 10%;
+            }
+            .Browsergoods{
+                width: 170px;
+            }
+            .BrowserInnerDiv{
+                width: 150px;
+            }
+            .BrowserImg{
+                width: 150px;
+            }
+            .Phone{
+                display: block;
+            }
+        }
+        @media  (max-width: 700px){
+            .imgGrid{
+                -webkit-column-count: 3;
+                -webkit-column-width: 150px;
+                width: 96%;
+            }
+            .Browsergoods{
+                width: 170px;
+            }
+            .BrowserInnerDiv{
+                width: 150px;
+            }
+            .BrowserImg{
+                width: 150px;
+            }
+            .PC{
+                display: none;
+            }
+            .Phone{
+                display: block;
+            }
+        }
+        @media  (max-width: 356px){
+            .imgGrid{
+                -webkit-column-count: 2;
+                -webkit-column-width: 150px;
+                width: 99%;
+            }
+            .Browsergoods{
+                width: 150px;
+            }
+            .BrowserInnerDiv{
+                width: 130px;
+            }
+            .BrowserImg{
+                width: 130px;
+            }
+            .PC{
+                display: none;
+            }
+            .Phone{
+                display: block;
+            }
         }
     </style>
 </head>

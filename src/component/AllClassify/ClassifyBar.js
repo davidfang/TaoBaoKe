@@ -23,12 +23,12 @@ export default class ClassifyBar extends React.Component {
             {
                 label: '所有分类',
                 ele: <AllClassify/>,
-                link:'All'
+                link:'/All'
             },
             {
                 label: '母婴',
                 ele: <Mombaby/>,
-                link:'Mombaby'
+                link:'/Mombaby'
             },
             {
                 label: "车品",
@@ -81,6 +81,7 @@ export default class ClassifyBar extends React.Component {
         }
     }
     componentWillReceiveProps(){
+        console.log(1)
         switch (window.location.pathname){
             case '/All':
                 this.iniSelect=0;
