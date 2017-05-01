@@ -6,7 +6,8 @@ const initState = {
     Beautiful:[],
     Clothes:[],
     Foods:[],
-    CarThings:[]
+    CarThings:[],
+    Search:[]
 
 };
 
@@ -38,6 +39,9 @@ export default function testReducer(state = initState, action = {}) {
             return clone;
         case "CLOTHES":
             clone.Clothes = payload;
+            return clone;
+        case "SEARCH":
+            clone.Search = payload;
             return clone;
 
 

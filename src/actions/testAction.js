@@ -48,4 +48,10 @@ export function Foods(data){
         payload: data
     }
 }
+export function Search(data){
+    return{
+        type:"SEARCH",
+        payload: data
+    }
+}
 

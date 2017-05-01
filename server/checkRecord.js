@@ -23,4 +23,7 @@ module.exports = function (app) {
     app.use("/test/foodImgLoading",(req,res)=>{
         res.json(require("./json/foodImgLoad.json"))
     })
+    app.use("/test/Search",(req,res)=>{
+            res.json(require("./json/Search.json"))
+        })
 }
