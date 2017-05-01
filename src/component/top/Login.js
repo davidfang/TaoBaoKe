@@ -12,10 +12,14 @@ export default class Login extends React.Component{
             ModalIsShow:true,
         })
     }
+    getInformation(){
+
+    }
     handCloseModal(){ //关闭模态框
         this.setState({
             ModalIsShow:!this.state.ModalIsShow,
         });
+        this.getInformation();
     }
     renderModal(){
         return this.state.ModalIsShow ? <ModalBox ModalStatus={this.state.ModalIsShow} onClick={()=>this.handCloseModal()}/> : null;
