@@ -15,6 +15,7 @@ import Clothes from './AllClassify/Clothes';
 import Foods from './AllClassify/Foods';
 import Mombaby from './AllClassify/MomBaby';
 import Detail from "./ProductsDetail/Detail"
+import SearchResoult from "./search/SearchResoult"
 
 const history = createHistory();
 
@@ -47,6 +48,7 @@ export default class Root extends React.Component {
 
                         </ClassifyBar>
                             <Route path='/Detail' component={ Detail }/>
+                            <Route path='/Search' component={ SearchResoult }/>
                         </div>
                     </Router>
 
